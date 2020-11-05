@@ -17,6 +17,7 @@ python run.py -i /home/pcm -o /home/mp3
 ```
 
 * run.py에서 `mp3_path`를 수정하여 mp3 외의 wav파일 등으로 export 할 수 있음.
+* output_path에 있는 mp3파일과 같은 이름의 pcm파일은 생성하지 않음.
 
 ## 필요 프로그램
 * ffmpeg
