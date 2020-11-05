@@ -7,7 +7,14 @@ def pcm_files(folder_path) :
 
 # convert
 def convert(folder_path, output_folder_path, pcm_files) :
+    # mp3 files that already have been made
+    already_exist_mp3 = [f for f in os.listdir(folder_path if f.endswith('.mp3'))]
+
     for pcm_file in pcm_files :
+        # if pcm file name is in already_exist_mp3, pass the converting
+        if pcm_file[:-3]+'mp3' in already_exist_mp3 :
+            continue
+
         pcm_path = ''
         if folder_path[-1] == '/' :
             pcm_path = folder_path + pcm_file
